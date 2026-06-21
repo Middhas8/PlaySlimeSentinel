@@ -1,0 +1,39 @@
+/* divider.css
+   Linha horizontal que divide seções.
+   
+   Classes:
+     .divider        — base, sempre presente
+     .divider-1      — largura grande  (~80%), opacidade 100%
+     .divider-2      — largura média   (~60%), opacidade 50%
+     .divider-3      — largura pequena (~40%), opacidade 33%
+   
+   Para adicionar uma divisão no HTML:
+     <div class="divider divider-1"></div>
+*/
+
+.divider {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-md) 0;
+}
+
+.divider::after {
+  content: "";
+  display: block;
+  border-top: 4px solid var(--color-divider);
+}
+
+.divider-1::after {
+  width: 80%;
+  opacity: 1;
+}
+
+.divider-2::after {
+  width: 60%;
+  opacity: 0.5;
+}
+
+.divider-3::after {
+  width: 40%;
+  opacity: 0.33;
+}

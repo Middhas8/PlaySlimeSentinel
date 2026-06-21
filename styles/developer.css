@@ -1,0 +1,114 @@
+/* developer.css
+   Seção "Conhece o developer" — terminal falso estilo C++.
+
+   Cores do terminal são fixas (preto/verde) propositalmente,
+   independente do tema claro/escuro, para manter a estética de terminal real.
+*/
+
+#developer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.developer-title {
+  text-align: center;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.terminal {
+  background-color: #0c0c0c;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  font-family: "Courier New", monospace;
+}
+
+/* Barra de título estilo macOS */
+.terminal-bar {
+  display: flex;
+  gap: 8px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: #1a1a1a;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dot-red {
+  background-color: #ff5f56;
+}
+.terminal-dot-yellow {
+  background-color: #ffbd2e;
+}
+.terminal-dot-green {
+  background-color: #27c93f;
+}
+
+/* Corpo do terminal */
+.terminal-body {
+  padding: var(--spacing-lg);
+  min-height: 320px;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminal-line {
+  margin: 0;
+}
+
+/* Cores de texto — mesmos nomes do C++ original */
+.t-white {
+  color: #f0f0f0;
+}
+.t-gray {
+  color: #6e6e6e;
+}
+.t-cyan {
+  color: #5ce1e6;
+}
+.t-amber {
+  color: #f5a623;
+}
+
+/* Cursor piscando no fim da linha sendo escrita */
+.terminal-cursor::after {
+  content: "▋";
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Botão de executar */
+.terminal-run-btn {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm);
+  background-color: #1a1a1a;
+  color: #27c93f;
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  font-family: "Courier New", monospace;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.terminal-run-btn:hover {
+  background-color: #242424;
+}
+
+.terminal-run-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slime Sentinel</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Estilos — root primeiro, pois os outros dependem das suas variáveis -->
+    <link rel="stylesheet" href="styles/root.css" />
+    <link rel="stylesheet" href="styles/divider.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/platforms.css" />
+    <link rel="stylesheet" href="styles/gameplay.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/developer.css" />
+
+    <!-- JS como módulo — permite usar import/export nos arquivos JS -->
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="navbar-inner">
+        <div class="navbar-links">
+          <a href="#hero" class="navbar-link">Hero</a>
+          <span class="navbar-separator">|</span>
+          <a href="#gameplay" class="navbar-link">Gameplay</a>
+          <span class="navbar-separator">|</span>
+          <a href="#footer" class="navbar-link">Rodapé</a>
+        </div>
+        <button id="theme-toggle" aria-label="Alternar tema">
+          <!-- Ícone injetado pelo theme.js -->
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero">
+        <img
+          src="assets/images/hero.png"
+          alt="Slime Sentinel"
+          class="hero-image"
+        />
+      </section>
+
+      <!-- PLATAFORMAS -->
+      <section id="platforms">
+        <div class="platforms-inner">
+          <!-- Steam — desativado por agora -->
+          <a href="#" class="platform-btn platform-steam platform-disabled">
+            <i class="fa-brands fa-steam"></i>
+            <span>Steam</span>
+          </a>
+
+          <!-- Itch.io — desativado por agora -->
+          <a href="#" class="platform-btn platform-itchio platform-disabled">
+            <i class="fa-brands fa-itch-io"></i>
+            <span>Itch.io</span>
+          </a>
+
+          <!-- Google Drive — funcional -->
+          <a
+            href="#"
+            class="platform-btn platform-drive"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-google-drive"></i>
+            <span>Google Drive</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- DIVISOR -->
+      <div class="divider divider-1"></div>
+
+      <!-- GAMEPLAY -->
+      <section id="gameplay">
+        <!-- BLOCO DE GAMEPLAY — copie e cole este bloco para adicionar mais -->
+        <div class="gameplay-block">
+          <div class="gameplay-image">
+            <img src="assets/images/placeholder.png" alt="Gameplay" />
+          </div>
+          <div class="gameplay-text">
+            <h2>Título da mecânica</h2>
+            <p>
+              Descrição de como esta parte do jogo funciona. Substitua esta
+              linha pelo texto real.
+            </p>
+          </div>
+        </div>
+        <!-- FIM DO BLOCO DE GAMEPLAY -->
+      </section>
+
+      <!-- DIVISOR -->
+      <div class="divider divider-1"></div>
+
+      <!-- DEVELOPER TERMINAL -->
+      <section id="developer">
+        <h2 class="developer-title">Conheça o developer</h2>
+
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dot terminal-dot-red"></span>
+            <span class="terminal-dot terminal-dot-yellow"></span>
+            <span class="terminal-dot terminal-dot-green"></span>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <!-- Conteúdo gerado pelo terminal.js -->
+          </div>
+
+          <button class="terminal-run-btn" id="terminal-run-btn">
+            ▶ Executar
+          </button>
+        </div>
+      </section>
+
+      <!-- DIVISOR -->
+      <div class="divider divider-1"></div>
+
+      <!-- RODAPÉ -->
+      <footer id="footer">
+        <p class="footer-copyright">
+          © 2025 Slime Sentinel. Todos os direitos reservados.
+        </p>
+        <p class="footer-contact">Contacto: seuemail@exemplo.com</p>
+        <a
+          href="https://github.com/seuusuario"
+          class="footer-github"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>

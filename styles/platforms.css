@@ -1,0 +1,116 @@
+/* platforms.css
+   Seção de plataformas — botões de download/acesso ao jogo.
+
+   Para alterar as cores de cada plataforma, mude as variáveis no :root abaixo.
+   Cada plataforma tem:
+     -outer: cor da borda/sombra externa
+     -inner: cor do fundo interno (normalmente mais clara)
+     -text:  cor do texto e ícone
+*/
+
+:root {
+  /* Steam — azul acinzentado */
+  --steam-outer: #1b2838;
+  --steam-inner: #2a475e;
+  --steam-text: #c7d5e0;
+
+  /* Itch.io — vermelho */
+  --itchio-outer: #b13e3e;
+  --itchio-inner: #fa5c5c;
+  --itchio-text: #ffffff;
+
+  /* Google Drive — verde */
+  --drive-outer: #1a7a4a;
+  --drive-inner: #2ecc71;
+  --drive-text: #ffffff;
+}
+
+#platforms {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.platforms-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+/* --- Botão base --- */
+.platform-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  width: 160px;
+  height: 60px;
+
+  /* Efeito de profundidade — sombra interna + externa em camadas */
+  box-shadow:
+    0 6px 0 var(--btn-outer),
+    /* sombra inferior (dá sensação de volume) */ inset 0 -4px 8px
+      rgba(0, 0, 0, 0.3),
+    /* sombra interna inferior */ inset 0 4px 8px rgba(255, 255, 255, 0.1); /* brilho interno superior */
+}
+
+.platform-btn i {
+  font-size: 1.4rem;
+}
+
+.platform-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 0 var(--btn-outer),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.platform-btn:active {
+  transform: translateY(4px); /* afunda ao clicar */
+  box-shadow:
+    0 2px 0 var(--btn-outer),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Cores por plataforma via variáveis locais --- */
+.platform-steam {
+  background-color: var(--steam-inner);
+  color: var(--steam-text);
+  --btn-outer: var(--steam-outer);
+}
+
+.platform-itchio {
+  background-color: var(--itchio-inner);
+  color: var(--itchio-text);
+  --btn-outer: var(--itchio-outer);
+}
+
+.platform-drive {
+  background-color: var(--drive-inner);
+  color: var(--drive-text);
+  --btn-outer: var(--drive-outer);
+}
+
+/* --- Desativado --- */
+.platform-disabled {
+  filter: grayscale(100%);
+  pointer-events: none;
+}
