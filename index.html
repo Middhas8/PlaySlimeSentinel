@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt" data-theme="dark">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,15 +36,10 @@
     <nav id="navbar">
       <div class="navbar-inner">
         <div class="navbar-links">
-          <a href="#hero" class="navbar-link">Hero</a>
+          <a href="#gameplay" class="navbar-link">Mecânicas e gameplay</a>
           <span class="navbar-separator">|</span>
-          <a href="#gameplay" class="navbar-link">Gameplay</a>
-          <span class="navbar-separator">|</span>
-          <a href="#footer" class="navbar-link">Rodapé</a>
+          <a href="#developer" class="navbar-link">Conheça o desenvolvedor</a>
         </div>
-        <button id="theme-toggle" aria-label="Alternar tema">
-          <!-- Ícone injetado pelo theme.js -->
-        </button>
       </div>
     </nav>
 
@@ -91,20 +86,88 @@
 
       <!-- GAMEPLAY -->
       <section id="gameplay">
-        <!-- BLOCO DE GAMEPLAY — copie e cole este bloco para adicionar mais -->
+        <!-- BLOCO 1 — Imagem na esquerda, texto na direita (padrão, sem .reverse) -->
         <div class="gameplay-block">
-          <div class="gameplay-image">
-            <img src="assets/images/placeholder.png" alt="Gameplay" />
+          <div class="gameplay-media">
+            <img
+              src="assets/images/placeholder.png"
+              alt="Ciclo de dia e noite"
+            />
           </div>
           <div class="gameplay-text">
-            <h2>Título da mecânica</h2>
+            <h2>Ciclo de três fases</h2>
             <p>
-              Descrição de como esta parte do jogo funciona. Substitua esta
-              linha pelo texto real.
+              Cada dia tem 3 fases, colheita, fortificação e batalha. De manhã
+              recolhe materiais atraves dos corpos dos inimigos, à tarde usa-os
+              para ficar mais forte e eficiente, e à noite defende a Chama das
+              ondas que se aproximam. O objetivo e defender a chama o máximo de
+              ciclos possível.
             </p>
           </div>
         </div>
-        <!-- FIM DO BLOCO DE GAMEPLAY -->
+
+        <div class="divider divider-2"></div>
+
+        <!-- BLOCO 2 — Texto na esquerda, imagem na direita (.reverse inverte a ordem) -->
+        <div class="gameplay-block reverse">
+          <div class="gameplay-media">
+            <img src="assets/images/placeholder.png" alt="A Chama" />
+          </div>
+          <div class="gameplay-text">
+            <h2>A Chama</h2>
+            <p>
+              A chame é o nexus, ela pode processar os corpos que trazes para
+              materiais ou absorver eles para aumentar o nivel das tuas cópias,
+              ela tambem delimita quantas cópias podem serem mantidas ao mesmo
+              tempo. Se ela se apagar, é o fim da run.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider divider-2"></div>
+
+        <!-- BLOCO 3 — Imagem na esquerda, texto na direita (padrão, sem .reverse) -->
+        <div class="gameplay-block">
+          <div class="gameplay-media">
+            <img src="assets/images/placeholder.png" alt="Múltiplos slimes" />
+          </div>
+          <div class="gameplay-text">
+            <h2>Colónia de slimes</h2>
+            <p>
+              Cria e comanda várias cópias através da Chama, cada uma sendo um
+              Combatente ou Trabalhador. O Avatar é a cópia que esta controlando
+              no momento, você pode troca entre elas a qualquer altura para
+              reagir ao que a colónia precisa.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider divider-2"></div>
+
+        <!-- BLOCO 4 — Texto na esquerda, imagem na direita (.reverse inverte a ordem) -->
+        <div class="gameplay-block reverse">
+          <div class="gameplay-media">
+            <img src="assets/images/placeholder.png" alt="Crafting" />
+          </div>
+          <div class="gameplay-text">
+            <h2>Crafting</h2>
+            <p>
+              Arrasta um ingrediente para a boca do slime para iniciar o
+              crafting de um item. Solta os materiais na boca do slime, apos ter
+              a combinação que queres clique para craftar, e o slime mastiga, se
+              a receita existir, cospe o item pronto (ferramentas, armadilhas ou
+              equipamentos). Se não der, cospe tudo de volta com uma cara de
+              nojo.
+            </p>
+          </div>
+        </div>
+
+        <!--
+    PARA ADICIONAR MAIS UM BLOCO:
+    1. Copia um <div class="gameplay-block"> inteiro (com ou sem .reverse, alternando)
+    2. Cola depois do último bloco
+    3. Adiciona um <div class="divider divider-2"></div> ANTES dele, separando do bloco anterior
+  -->
       </section>
 
       <!-- DIVISOR -->
@@ -112,7 +175,7 @@
 
       <!-- DEVELOPER TERMINAL -->
       <section id="developer">
-        <h2 class="developer-title">Conheça o developer</h2>
+        <h2 class="developer-title">Conheça o desenvolvedor</h2>
 
         <div class="terminal">
           <div class="terminal-bar">
@@ -136,18 +199,19 @@
 
       <!-- RODAPÉ -->
       <footer id="footer">
-        <p class="footer-copyright">
-          © 2025 Slime Sentinel. Todos os direitos reservados.
-        </p>
-        <p class="footer-contact">Contacto: seuemail@exemplo.com</p>
-        <a
-          href="https://github.com/seuusuario"
-          class="footer-github"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
+        <div class="footer-inner">
+          <p class="footer-copyright">© 2026 Slime Sentinel</p>
+          <p class="footer-contact">Contacto: slimesentinel.dev@gmail.com</p>
+          <a
+            href="https://github.com/Middhas8"
+            class="footer-github"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
       </footer>
     </main>
   </body>

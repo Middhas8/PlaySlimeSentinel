@@ -1,0 +1,60 @@
+/* gameplay.css
+   Blocos de explicação de mecânicas — imagem e texto lado a lado,
+   alternando de lado a cada bloco via classe .reverse.
+
+   Estrutura de cada bloco:
+     .gameplay-block        — container flex (linha)
+     .gameplay-block.reverse — inverte a ordem (texto à esquerda, imagem à direita)
+     .gameplay-media         — lado da imagem/gif
+     .gameplay-text          — lado do texto
+*/
+
+#gameplay {
+  margin: 0 auto;
+  padding: var(--spacing-lg) 0;
+}
+
+.gameplay-block {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  background-color: var(--color-surface);
+  border: 8px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Inverte a ordem visual dos dois lados sem mexer no HTML */
+.gameplay-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.gameplay-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.gameplay-media img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.gameplay-text {
+  flex: 1;
+  padding: 0 var(--spacing-lg); /* padding horizontal pedido no planejamento */
+}
+
+.gameplay-text h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.gameplay-text p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}

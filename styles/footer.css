@@ -1,0 +1,43 @@
+/* footer.css
+   Rodapé — textos pequenos, copyright, contacto e link do GitHub.
+*/
+
+#footer {
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.footer-copyright,
+.footer-contact {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.footer-github {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-github:hover {
+  color: var(--color-accent);
+}
+
+.footer-github i {
+  font-size: 1.1rem;
+}

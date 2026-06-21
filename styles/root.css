@@ -29,36 +29,21 @@
   /* --- Transições --- */
   --transition-fast: 150ms ease;
   --transition-med: 300ms ease;
-}
 
-/* ============================================================
-   TEMA CLARO (padrão)
-   ============================================================ */
+  /* --- Cores (Geleia clara) --- */
+  --color-bg: #faf8f2;
+  --color-surface: #eee9da;
+  --color-text: #2b2924;
+  --color-text-muted: #6b6859;
+  --color-accent: #2d9d6f;
+  --color-border: rgba(43, 41, 36, 0.1);
+  --color-navbar-bg: rgba(250, 248, 242, 0.7);
+  --color-divider: rgba(43, 41, 36, 0.15);
 
-[data-theme="light"] {
-  --color-bg: #ffffff;
-  --color-surface: #f4f4f5;
-  --color-text: #18181b;
-  --color-text-muted: #71717a;
-  --color-accent: #6d28d9; /* roxo — troque pela cor principal do jogo */
-  --color-border: rgba(0, 0, 0, 0.1);
-  --color-navbar-bg: rgba(255, 255, 255, 0.7);
-  --color-divider: rgba(0, 0, 0, 0.15);
-}
-
-/* ============================================================
-   TEMA ESCURO
-   ============================================================ */
-
-[data-theme="dark"] {
-  --color-bg: #09090b;
-  --color-surface: #18181b;
-  --color-text: #fafafa;
-  --color-text-muted: #a1a1aa;
-  --color-accent: #a78bfa;
-  --color-border: rgba(255, 255, 255, 0.1);
-  --color-navbar-bg: rgba(9, 9, 11, 0.7);
-  --color-divider: rgba(255, 255, 255, 0.15);
+  --terminal-bg: #1f1d18;
+  --terminal-bar-bg: #2b2924;
+  --terminal-border: #3a3830;
+  --terminal-text: #f2efe6;
 }
 
 /* ============================================================
